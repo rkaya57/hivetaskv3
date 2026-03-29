@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Hive Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">HT</div>
+        <div>
+          <strong>Hive Task</strong>
+          <span>Admin Yönetimi</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="dashboard.html">Kullanıcı Paneli</a>
+        <a href="admin.html" class="nav-btn">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container admin-grid">
+      <div class="glass panel-card">
+        <div class="section-bar">
+          <h1>Yeni Görev Oluştur</h1>
+          <span class="mini-pill">Admin</span>
+        </div>
+
+        <form id="taskForm" class="grid-form">
+          <label>
+            <span>Görev Başlığı</span>
+            <input type="text" id="taskTitle" required placeholder="Twitter hesabını takip et" />
+          </label>
+
+          <label>
+            <span>Platform</span>
+            <select id="taskPlatform" required>
+              <option value="Twitter">Twitter</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Discord">Discord</option>
+              <option value="Web">Web</option>
+            </select>
+          </label>
+
+          <label class="full">
+            <span>Görev Açıklaması</span>
+            <textarea id="taskDescription" rows="4" placeholder="Kullanıcının ne yapması gerekiyor?" required></textarea>
+          </label>
+
+          <label>
+            <span>Ödül (USTC)</span>
+            <input type="number" id="taskReward" min="0" step="0.01" required placeholder="15" />
+          </label>
+
+          <label>
+            <span>Puan</span>
+            <input type="number" id="taskPoints" min="0" required placeholder="120" />
+          </label>
+
+          <label class="full">
+            <span>Görev Linki</span>
+            <input type="url" id="taskLink" placeholder="https://x.com/..." required />
+          </label>
+
+          <div class="full">
+            <button type="submit" class="btn btn-primary btn-block">Görev Ekle</button>
+          </div>
+        </form>
+
+        <div id="taskMessage" class="message hidden"></div>
+      </div>
+
+      <div class="glass panel-card">
+        <div class="section-bar">
+          <h2>Bekleyen Ödeme Talepleri</h2>
+        </div>
+        <div id="withdrawalsList" class="admin-list"></div>
+      </div>
+
+      <div class="glass panel-card">
+        <div class="section-bar">
+          <h2>Kullanıcılar</h2>
+        </div>
+        <div id="usersList" class="admin-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

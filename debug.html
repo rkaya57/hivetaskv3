@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firebase Test | Hive Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="debug">
+  <main class="page-shell">
+    <section class="container">
+      <div class="glass form-card">
+        <div class="form-head">
+          <h1>Firebase Test</h1>
+          <p>Önce bu sayfayı aç. Burada hata varsa kayıt sayfası da çalışmaz.</p>
+        </div>
+        <button id="debugTestBtn" class="btn btn-primary btn-block">Bağlantıyı Test Et</button>
+        <div id="debugMessage" class="message hidden"></div>
+        <div class="message" style="display:block;margin-top:14px;">
+          Kontrol listesi:
+          <br>1) firebase-config.js var mı?
+          <br>2) Site Live Server ile mi açıldı?
+          <br>3) Email/Password aktif mi?
+          <br>4) Firestore oluşturuldu mu?
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

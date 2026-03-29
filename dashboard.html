@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel | Hive Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">HT</div>
+        <div>
+          <strong>Hive Task</strong>
+          <span>Terra Classic & USTC</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="register.html">Kayıt Ol</a>
+        <a href="login.html">Giriş Yap</a>
+        <a href="admin.html">Admin</a>
+        <button id="logoutBtn" class="nav-btn">Çıkış</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container dashboard-layout">
+      <div class="dashboard-top">
+        <div>
+          <h1>Kullanıcı Paneli</h1>
+          <p id="welcomeText">Hesap bilgilerin ve görev durumların yükleniyor...</p>
+        </div>
+
+        <div class="glass score-card fixed-score">
+          <span>Toplam HiveTaskPuan</span>
+          <div class="score-row">
+            <div class="puan-logo small-fixed">
+              <img src="assets/htp-logo.png" alt="HTP Logo" />
+            </div>
+            <strong id="pointsValue">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid dashboard-stats-grid">
+        <article class="glass stat-card compact">
+          <small>USTC Bakiye</small>
+          <strong id="ustcBalance">0.00 USTC</strong>
+          <span>Onaylanan görev ödülleri</span>
+        </article>
+
+        <article class="glass stat-card compact">
+          <small>Tamamlanan Görev</small>
+          <strong id="completedTaskCount">0</strong>
+          <span>Onaylanmış görev sayın</span>
+        </article>
+
+        <article class="glass stat-card compact">
+          <small>Bağlı Terra Classic Cüzdanı</small>
+          <strong class="wallet-text" id="walletValue">-</strong>
+          <span>Çekimlerin gönderileceği adres</span>
+        </article>
+      </div>
+
+      <section class="glass panel-card">
+        <div class="section-bar">
+          <h2>Aktif Görevler</h2>
+          <span class="mini-pill">USTC Odaklı</span>
+        </div>
+        <div id="taskList" class="task-list"></div>
+      </section>
+
+      <section class="glass panel-card">
+        <div class="section-bar">
+          <h2>Ödeme Talebi</h2>
+        </div>
+        <form id="withdrawForm" class="inline-form">
+          <label>
+            <span>Çekmek istediğin USTC</span>
+            <input type="number" id="withdrawAmount" min="1" step="0.01" placeholder="10" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Talep Gönder</button>
+        </form>
+        <div id="withdrawMessage" class="message hidden"></div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

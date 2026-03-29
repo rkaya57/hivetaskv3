@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giriş Yap | Hive Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="login">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">HT</div>
+        <div>
+          <strong>Hive Task</strong>
+          <span>Terra Classic & USTC</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="register.html">Kayıt Ol</a>
+        <a href="login.html">Giriş Yap</a>
+        <a href="dashboard.html" class="nav-btn">Panel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container">
+      <div class="glass form-card">
+        <div class="form-head">
+          <h1>Giriş Yap</h1>
+          <p>Hesabına giriş yap, görevleri tamamla, USTC bakiyeni ve HiveTaskPuan durumunu yönet.</p>
+        </div>
+
+        <form id="loginForm" class="single-form">
+          <label>
+            <span>E-posta</span>
+            <input type="email" id="loginEmail" placeholder="mail@ornek.com" required />
+          </label>
+
+          <label>
+            <span>Şifre</span>
+            <input type="password" id="loginPassword" placeholder="********" required />
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+        </form>
+
+        <div id="loginMessage" class="message hidden"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

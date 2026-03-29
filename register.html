@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayıt Ol | Hive Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="register">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">HT</div>
+        <div>
+          <strong>Hive Task</strong>
+          <span>Terra Classic & USTC</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="register.html">Kayıt Ol</a>
+        <a href="login.html">Giriş Yap</a>
+        <a href="dashboard.html" class="nav-btn">Panel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container">
+      <div class="glass form-card wide">
+        <div class="form-head">
+          <h1>Kayıt Ol</h1>
+          <p>Bu sürüm demo değil, Firebase altyapısına bağlı canlı kullanıma hazır yapıdadır. Aşağıdaki alanların tamamı zorunludur.</p>
+        </div>
+
+        <form id="registerForm" class="grid-form">
+          <label>
+            <span>Ad Soyad</span>
+            <input type="text" id="fullName" placeholder="Ad Soyad" required />
+          </label>
+
+          <label>
+            <span>E-posta *</span>
+            <input type="email" id="email" placeholder="mail@ornek.com" required />
+          </label>
+
+          <label>
+            <span>Şifre *</span>
+            <input type="password" id="password" placeholder="En az 6 karakter" minlength="6" required />
+          </label>
+
+          <label>
+            <span>Twitter Kullanıcı Adı *</span>
+            <input type="text" id="twitterUsername" placeholder="@kullaniciadi" required />
+          </label>
+
+          <label>
+            <span>Telegram Kullanıcı Adı *</span>
+            <input type="text" id="telegramUsername" placeholder="@telegramkullanici" required />
+          </label>
+
+          <label class="full">
+            <span>Terra Classic Cüzdan Adresi *</span>
+            <input type="text" id="terraWallet" placeholder="terra1..." required />
+          </label>
+
+          <label class="checkbox full checkbox-line">
+            <input type="checkbox" id="terms" required />
+            <span>Görev doğrulama, kullanıcı puanlama ve ödeme süreçleri için bilgilerimin kullanılmasını kabul ediyorum.</span>
+          </label>
+
+          <div class="full">
+            <button type="submit" class="btn btn-primary btn-block">Hesap Oluştur</button>
+          </div>
+        </form>
+
+        <div id="registerMessage" class="message hidden"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
